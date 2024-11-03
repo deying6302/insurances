@@ -14,30 +14,21 @@
     <link rel="shortcut icon" href="{{ asset('backend/images/favicon.png') }}" type="image/x-icon">
     <title>Zono - Premium Admin Template</title>
     <!-- Google font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com/">
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
-    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;700;800;900&amp;display=swap"
-        rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900&amp;display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="{{ asset('backend/css/font-awesome.css') }}">
-    <!-- ico-font-->
-    <link rel="stylesheet" type="text/css" href="{{ asset('backend/css/vendors/icofont.css') }}">
-    <!-- Themify icon-->
-    <link rel="stylesheet" type="text/css" href="{{ asset('backend/css/vendors/themify.css') }}">
-    <!-- Flag icon-->
-    <link rel="stylesheet" type="text/css" href="{{ asset('backend/css/vendors/flag-icon.css') }}">
-    <!-- Feather icon-->
-    <link rel="stylesheet" type="text/css" href="{{ asset('backend/css/vendors/feather-icon.css') }}">
-    <!-- Plugins css start-->
-    <!-- Plugins css Ends-->
-    <!-- Bootstrap css-->
-    <link rel="stylesheet" type="text/css" href="{{ asset('backend/css/vendors/bootstrap.css') }}">
-    <!-- App css-->
-    <link rel="stylesheet" type="text/css" href="{{ asset('backend/css/style.css') }}">
-    <link id="color" rel="stylesheet" href="{{ asset('backend/css/color-1.css') }}" media="screen">
-    <!-- Responsive css-->
-    <link rel="stylesheet" type="text/css" href="{{ asset('backend/css/responsive.css') }}">
+    <link href="{{ asset('backend/css/vendor.min.css') }}" rel="stylesheet" />
+    <link href="{{ asset('backend/css/default/app.min.css') }}" rel="stylesheet" />
+
+    <style>
+        .svg-wrraper, .svg-content {
+            display: flex;
+            justify-content: center;
+        }
+
+        .svg-content {
+            flex-direction: column;
+            align-items: center;
+        }
+
+    </style>
 </head>
 
 <body>

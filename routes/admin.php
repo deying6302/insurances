@@ -10,7 +10,7 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function () {
             'full_name' => 'Sin Dang',
             'user_name' => 'Sin2x',
             'email' => 'admin@gmail.com',
-            'password' => bcrypt('123456'),
+            'password' => bcrypt('12345678'),
             'phone' => '0128803256',
             'address' => 'HN',
             'gender' => 'male'
@@ -30,5 +30,15 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function () {
         // Route::get('/clear-cache', 'OptimizationController@clearCache');
 
         Route::get('/dashboard', 'AdminController@dashboard')->name('dashboard');
+
+        // Hospital
+        Route::name('hospital.')->prefix('hospital')->group(function () {
+            Route::get('/', 'HospitalController@index')->name('index');
+            Route::post('/store', 'HospitalController@store')->name('store');
+            Route::get('/edit', 'HospitalController@edit')->name('edit');
+            Route::put('/update', 'CategoryController@update')->name('update');
+            Route::delete('/delete', 'CategoryController@delete')->name('delete');
+        });
+
     });
 });

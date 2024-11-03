@@ -17,9 +17,19 @@ class LoginController extends Controller
 
     public function postLogin(Request $request) // :POST
     {
+        $request->validate([
+            'email' => 'required|email',
+            'password' => 'required|min:8',
+        ], [
+            'email.required' => 'Email không được để trống',
+            'email.email' => 'Email không hợp lệ',
+            'password.required' => 'Mật khẩu không được để trống',
+            'password.min' => 'Mật khẩu phải có ít nhất 8 ký tự',
+        ]);
+
         $credentials = [
             'email' => $request->email,
-            'password' => $request->login['password']
+            'password' => $request->password
         ];
 
         $remember_me = $request->filled('remember_me');
@@ -28,8 +38,8 @@ class LoginController extends Controller
             toastr()->success('Chào mừng bạn đến trang quản trị viên');
             return redirect()->route('admin.dashboard');
         } else {
-            toastr()->warning('Bạn nhập sai thông tin email & mật khẩu');
-            return redirect()->back();
+            toastr()->warning('Bạn nhập sai thông tin email hoặc mật khẩu');
+            return redirect()->back()->withInput();
         }
     }
 }
