@@ -53,6 +53,8 @@
     <script type="text/javascript" src="{{ asset('backend/vendors/toastr/toastr.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('backend/vendors/toastr/config.js') }}"></script>
 
+    {!! Toastr::message() !!}
+
     <script>
         // Hiển thị các lỗi validation bằng Toastr
         @if ($errors->any())

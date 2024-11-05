@@ -13,11 +13,11 @@
                     <div class="menu-profile-info">
                         <div class="d-flex align-items-center">
                             <div class="flex-grow-1">
-                                Sean Ngu
+                                {{ Auth::guard('admin')->user()->user_name }}
                             </div>
                             <div class="menu-caret ms-auto"></div>
                         </div>
-                        <small>Frontend developer</small>
+                        <small>{{ Auth::guard('admin')->user()->full_name }}</small>
                     </div>
                 </a>
             </div>

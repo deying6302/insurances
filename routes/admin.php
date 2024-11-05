@@ -31,6 +31,11 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function () {
 
         Route::get('/dashboard', 'AdminController@dashboard')->name('dashboard');
 
+        // Profile
+        Route::name('profile.')->prefix('profile')->group(function () {
+            Route::get('/', 'ProfileController@index')->name('index');
+        });
+
         // Hospital
         Route::name('hospital.')->prefix('hospital')->group(function () {
             Route::get('/', 'HospitalController@index')->name('index');

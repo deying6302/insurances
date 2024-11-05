@@ -94,7 +94,7 @@
                 </span>
             </a>
             <div class="dropdown-menu dropdown-menu-end me-1">
-                <a href="extra_profile.html" class="dropdown-item">Edit Profile</a>
+                <a href="{{ route('admin.profile.index') }}" class="dropdown-item">Hồ sơ cá nhân</a>
                 <a href="email_inbox.html" class="dropdown-item d-flex align-items-center">
                     Inbox
                     <span class="badge bg-danger rounded-pill ms-auto pb-4px">2</span>

@@ -46,13 +46,12 @@
                             <input type="email" name="email" value="{{ old('email') }}"
                                 class="form-control fs-13px h-45px border-0" placeholder="Email Address"
                                 id="emailAddress" />
-                            <label for="emailAddress" class="d-flex align-items-center text-gray-600 fs-13px">Email
-                                Address</label>
+                            <label for="emailAddress" class="d-flex align-items-center text-gray-600 fs-13px">Email</label>
                         </div>
                         <div class="form-floating mb-20px">
                             <input type="password" name="password" id="password" class="form-control fs-13px h-45px border-0" placeholder="Password" />
                             <label for="emailAddress"
-                                class="d-flex align-items-center text-gray-600 fs-13px">Password</label>
+                                class="d-flex align-items-center text-gray-600 fs-13px">Mật khẩu</label>
                             <div class="show-hide">
                                 <i class="fa fa-eye" id="togglePassword"></i>
                             </div>
@@ -60,11 +59,11 @@
                         <div class="form-check mb-20px">
                             <input class="form-check-input border-0" type="checkbox" name="remember_me" value="remember_me" />
                             <label class="form-check-label fs-13px text-gray-500" for="rememberMe">
-                                Remember Me
+                                Ghi nhớ mật khẩu
                             </label>
                         </div>
                         <div class="mb-20px">
-                            <button type="submit" class="btn btn-theme d-block w-100 h-45px btn-lg">Sign in</button>
+                            <button type="submit" class="btn btn-theme d-block w-100 h-45px btn-lg">Đăng nhập</button>
                         </div>
                     </form>
                 </div>
